@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/rec1"
+        android:layout_width="147dp"
+        android:layout_height="318dp"
+        android:src="@drawable/rectangle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rec2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/rectangle2"
+        app:layout_constraintBottom_toBottomOf="@id/rec1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <ImageView
+        android:id="@+id/lab"
+        android:layout_width="260dp"
+        android:layout_height="297dp"
+        android:layout_marginEnd="4dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/lab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Welcome to GB Bazaar"
+        android:textColor="#4DDAA9"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec1" />
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/rounded_edit_txt"
+        android:hint="email"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_login" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="password"
+        android:background="@drawable/rounded_edit_txt"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_edit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        style="@style/greenButtonStyle"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/rounded_btn"
+        android:padding="12dp"
+        android:text="Login"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_edit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_btn"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_edit"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"/>
+
+
+    <TextView
+        android:id="@+id/not_have_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display"
+        android:text=" Don't Have an account?"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_login"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/sf_pro_display"
+        android:text=" Register"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/not_have_acc"
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="673dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

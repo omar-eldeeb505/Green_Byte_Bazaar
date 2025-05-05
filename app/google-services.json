@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "514339634097",
+    "project_id": "greenbytebazaar-2f42f",
+    "storage_bucket": "greenbytebazaar-2f42f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514339634097:android:c289f31c75c60967475b90",
+        "android_client_info": {
+          "package_name": "com.example.greenbytebazaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBAGROrp_WWe59wbLh4X_SY_RYFC9-Vgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
