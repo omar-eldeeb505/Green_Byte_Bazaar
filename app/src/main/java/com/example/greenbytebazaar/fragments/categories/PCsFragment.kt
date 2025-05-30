@@ -1,7 +1,9 @@
 package com.example.greenbytebazaar.fragments.categories
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -18,12 +20,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class ComputerComponentsFragment: BaseCategoryFragment()  {
+class PCsFragment: BaseCategoryFragment()  {
+
     @Inject
     lateinit var firestore: FirebaseFirestore
 
     val viewModel by viewModels<CategoryViewModel>{
-        BaseCategoryViewModelFactory(firestore, Category.ComputerComponents)
+        BaseCategoryViewModelFactory(firestore, Category.PCs)
 
     }
 

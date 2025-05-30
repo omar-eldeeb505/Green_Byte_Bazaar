@@ -10,11 +10,10 @@ import com.example.greenbytebazaar.adapters.HomeViewpagerAdapter
 import com.example.greenbytebazaar.databinding.FragmentHomeBinding
 import com.example.greenbytebazaar.fragments.categories.AccessoriesFragment
 import com.example.greenbytebazaar.fragments.categories.ComputerComponentsFragment
-import com.example.greenbytebazaar.fragments.categories.ComputersFragment
+import com.example.greenbytebazaar.fragments.categories.PCsFragment
 import com.example.greenbytebazaar.fragments.categories.LaptopsFragment
 import com.example.greenbytebazaar.fragments.categories.MainCategoryFragment
 import com.example.greenbytebazaar.fragments.categories.NetworksFragment
-import com.example.greenbytebazaar.fragments.categories.OtherFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeFragment:Fragment(R.layout.fragment_home) {
@@ -33,12 +32,11 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         val categoriesFragment = arrayListOf<Fragment>(
             MainCategoryFragment(),
-            ComputersFragment(),
+            PCsFragment(),
             LaptopsFragment(),
             NetworksFragment(),
             AccessoriesFragment(),
             ComputerComponentsFragment(),
-            OtherFragment()
         )
         val viewPager2Adapter =
             HomeViewpagerAdapter(categoriesFragment, childFragmentManager, lifecycle)
@@ -46,12 +44,11 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
         TabLayoutMediator(binding.tabLayout,binding.viewPagerHome){tab,position->
             when(position){
                 0->tab.text="Main"
-                1->tab.text="Computers"
+                1->tab.text="PCs"
                 2->tab.text="Laptops"
                 3->tab.text="Networks"
-                4->tab.text="Accessories"
-                5->tab.text="Computer Components"
-                6->tab.text="Other"
+                4->tab.text="Computer Components"
+                5->tab.text="Accessories"
             }
 
         }.attach()

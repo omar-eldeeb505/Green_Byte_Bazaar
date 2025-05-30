@@ -10,4 +10,7 @@
     <color name="background">#EAF9F2</color>
     <color name="light_red">#FF9999</color>
     <color name="search_and_icons">#FAFBFC</color>
+    <color name="card_background">#FAFDFF</color>
+    <color name="gray500">#969899</color>
+    <color name="g_blue_gray200">#97AABD</color>
 </resources>
