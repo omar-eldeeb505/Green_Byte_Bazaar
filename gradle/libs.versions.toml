@@ -1,5 +1,6 @@
 [versions]
 agp = "8.9.1"
+brLoadingButtonAndroid = "1.14.0"
 circleimageview = "3.1.0"
 firebaseBom = "33.13.0"
 glide = "4.16.0"
@@ -23,6 +24,7 @@ navigationFragmentKtx = "2.5.2"
 navigationSafeArgsGradlePlugin = "2.8.9"
 navigationUiKtx = "2.5.2"
 playServicesLocation = "21.3.0"
+progressbutton = "2.1.0"
 stepperIndicator = "1.0.7"
 stepview = "1.5.1"
 viewpagerindicator = "1.0.0-alpha.1"
@@ -59,11 +61,13 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinStdlib" }
 kotlin-stdlib-v190 = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinStdlibVersion" }
 loading-button-android = { module = "br.com.simplepass:loading-button-android", version.ref = "loadingButtonAndroid" }
+loading-button-android-v1140 = { module = "br.com.simplepass:loading-button-android", version.ref = "brLoadingButtonAndroid" }
 loadingbuttonlibrary = { group = "com.example", name = "loadingbutton", version = "1.0.0" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+progressbutton = { module = "com.github.razir.progressbutton:progressbutton", version.ref = "progressbutton" }
 stepper-indicator = { module = "com.badoualy:stepper-indicator", version.ref = "stepperIndicator" }
 stepview = { module = "com.shuhart.stepview:stepview", version.ref = "stepview" }
 viewpagerindicator = { module = "io.github.vejei.viewpagerindicator:viewpagerindicator", version.ref = "viewpagerindicator" }

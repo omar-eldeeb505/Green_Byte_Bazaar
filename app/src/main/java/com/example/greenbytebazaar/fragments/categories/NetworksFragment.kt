@@ -6,8 +6,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
+import com.example.greenbytebazaar.R
 import com.example.greenbytebazaar.data.Category
 import com.example.greenbytebazaar.util.Resource
+import com.example.greenbytebazaar.util.showBottomNavigationView
 import com.example.greenbytebazaar.viewmodel.CategoryViewModel
 import com.example.greenbytebazaar.viewmodel.Factory.BaseCategoryViewModelFactory
 import com.google.android.material.snackbar.Snackbar

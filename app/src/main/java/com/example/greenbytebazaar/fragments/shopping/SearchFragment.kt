@@ -1,4 +1,4 @@
-package com.example.greenbytebazaar.fragments.Shopping
+package com.example.greenbytebazaar.fragments.shopping
 
 import androidx.fragment.app.Fragment
 import com.example.greenbytebazaar.R

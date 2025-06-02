@@ -1,4 +1,4 @@
-package com.example.greenbytebazaar.fragments.Shopping
+package com.example.greenbytebazaar.fragments.shopping
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.greenbytebazaar.R
-import com.example.greenbytebazaar.adapters.HomeViewpagerAdapter
+import com.example.greenbytebazaar.adapters.HomeViewPagerAdapter
 import com.example.greenbytebazaar.databinding.FragmentHomeBinding
 import com.example.greenbytebazaar.fragments.categories.AccessoriesFragment
 import com.example.greenbytebazaar.fragments.categories.ComputerComponentsFragment
@@ -39,7 +39,7 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
             ComputerComponentsFragment(),
         )
         val viewPager2Adapter =
-            HomeViewpagerAdapter(categoriesFragment, childFragmentManager, lifecycle)
+            HomeViewPagerAdapter(categoriesFragment, childFragmentManager, lifecycle)
         binding.viewPagerHome.adapter=viewPager2Adapter
         TabLayoutMediator(binding.tabLayout,binding.viewPagerHome){tab,position->
             when(position){

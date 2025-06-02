@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.greenbytebazaar.R
@@ -19,6 +20,7 @@ import com.example.greenbytebazaar.adapters.BestProductsAdapter
 import com.example.greenbytebazaar.adapters.SpecialProductsAdapter
 import com.example.greenbytebazaar.databinding.FragmentMainCategoryBinding
 import com.example.greenbytebazaar.util.Resource
+import com.example.greenbytebazaar.util.showBottomNavigationView
 import com.example.greenbytebazaar.viewmodel.MainCategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -48,6 +50,18 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
 
         setupSpecialProductsRv()
         setupBestProductsRv()
+
+        specialProductsAdapter.onClick = {
+            val b = Bundle().apply {
+                putParcelable("product",it)
+            }
+            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment,b)}
+        bestProductsAdapter.onClick = {
+            val b = Bundle().apply {
+                putParcelable("product",it)
+            }
+            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment,b)}
+
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.specialProducts.collectLatest {
@@ -129,5 +143,11 @@ class MainCategoryFragment: Fragment(R.layout.fragment_main_category) {
                 LinearLayoutManager.HORIZONTAL,false)
             adapter = specialProductsAdapter
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showBottomNavigationView()
+
     }
 }

@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.greenbytebazaar.R
 import com.example.greenbytebazaar.adapters.BestProductsAdapter
 import com.example.greenbytebazaar.databinding.FragmentBaseCategoryBinding
 import com.example.greenbytebazaar.databinding.FragmentMainCategoryBinding
+import com.example.greenbytebazaar.util.showBottomNavigationView
 
 open class BaseCategoryFragment: Fragment(R.layout.fragment_base_category) {
     private lateinit var binding: FragmentBaseCategoryBinding
@@ -29,6 +31,12 @@ open class BaseCategoryFragment: Fragment(R.layout.fragment_base_category) {
         super.onViewCreated(view, savedInstanceState)
 
         setupBestProductsRv()
+        bestProductsAdapter.onClick = {
+            val b = Bundle().apply {
+                putParcelable("product",it)
+            }
+            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment,b)}
+
 
         binding.nestedScrollBaseCategory.setOnScrollChangeListener (NestedScrollView.OnScrollChangeListener{
                 v,_,scrollY,_,_ ->
@@ -57,4 +65,9 @@ open class BaseCategoryFragment: Fragment(R.layout.fragment_base_category) {
                 GridLayoutManager.VERTICAL,false)
             adapter = bestProductsAdapter
         }    }
+    override fun onResume() {
+        super.onResume()
+        showBottomNavigationView()
+
+    }
 }
